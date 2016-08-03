@@ -1,34 +1,50 @@
-<div class="jumbotron">
-  <h1>Hello Everyone!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Not a Yeoman!"><br>
-    Hope you're having a lovely summer.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Request Sun<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<div ng-app class="jumbotron" ng-controller="MainCtrl">
 
-<!--added the below-->
-<div ng-app ng-init="firstnum=1;secondnum=2">
-  <input type="number" min="0" ng-model="firstnum">
-plus
-  <input type="number" min="0" ng-model="secondnum">
-    equals
-  <!--<b>{{firstnum + secondnum}}</b>-->
-  <span class="label label-success">{{firstnum + secondnum}}</span>
-</div>
-<!--end of addition-->
+  <h1>A Book App</h1>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+    <img src="images/yeoman.png" alt="I'm a Yeoman!"><br>
+    <p>It's a lovely time to read.</p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+    <p class="lead">
+    <div ng-init="saledate='08/01/16'">
+        <p>
+          <label for="saledate">On Sale Date:
+            <input type="text" name="saledate" ng-model="saledate">
+            <h3>{{saledate}}</h3>
+          </label>
+        </p>
+        <p>
+          <button class="btn btn-lg btn-primary" ng-click="refreshCurrent()">New Books Information</p>
+</p>
+<dl ng-repeat="group in books.Product_Group">
+  <dt>Title</dt>
+  <dd>{{group.Product_Group_Title}}</dd>
+  <dt>Versions</dt>
+  <dd>
+    <dl ng-repeat="version in group.Products">
+      <dt>Author</dt>
+      <dd>{{version.Author1}}</dd>
+      <dd>{{version.Format}}</dd>
+      <dd><img ng-src="{{version.CoverImageURL_Small}}"> </dd>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+    </dl>
+  </dd>
+</dl>
+ </div>
+
+<div class="search">
+    <label>Search: </label>
+    <input ng-model="query" placeholder="Search by title" autofocus>
+  </div>
+
+<label class="formgroup">Sort By:
+  <select ng-model="saledateOrder">
+    <option value="Title">Title</option>
+    <option value="Author1">Author</option>
+    <option value="Format">Format</option>
+    <option value="Imprint">Imprint</option>
+  </select>
+</label>
+
+
 </div>
