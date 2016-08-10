@@ -9,14 +9,22 @@
  */
 
   angular.module('projectsApp')
-    .controller('MainCtrl', function($scope, current) {
+    .controller('MainCtrl', function($scope, current, $filter) {
+      $scope.saledate = $filter('date')(new Date(),'MM/dd/yy');
       $scope.books = current.query({
-        saledate: '08/01/16'
+        saledate: $scope.saledate
       });
 
-  $scope.refreshCurrent = function(){
-    $scope.books = current.query({
-      saledate: $scope.saledate
-    });
-  };
+      $scope.findBooks = function (){
+        $scope.books = current.query({
+          saledate: $scope.saledate,
+          authorname: $scope.authorname,
+          title: $scope.title
+        });
+      };
+
+
+
+
+
   });
