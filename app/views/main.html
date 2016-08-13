@@ -1,12 +1,14 @@
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
   <h1>A BOOK APP</h1>
   <h2>What's New and When?</h2>
-    <img src="images/yeoman.png" alt="I'm a Yeoman!"><br>
+    <img src="images/Read.jpg" alt="drawing of people reading"><br>
     <p>It's a lovely time to read.</p>
     <p class="lead">
     <div>
       <form>
-        <p>
+          <label for="publisher"> Publisher
+            <input type="text" name="publisher" ng-model="publisher" placeholder="Harper Collins">
+            </label>
           <label for="saledate"> Release Date
             <input type="text" name="saledate" ng-model="saledate">
           </label>
@@ -21,11 +23,6 @@
       </form>
   <p class="search">{{books.Product_Group.length}} Books found matching the query: {{saledate}}</p>
 
-          <button class="btn btn-lg btn-primary" ng-click="newdate">Select New Date</button>
-<!--findDate-->
-
-
-<!--this part works fine-->
 <dl ng-repeat="group in books.Product_Group">
   <dt>Title: </dt>
   <dd>{{group.Product_Group_Title}}</dd>
@@ -41,8 +38,13 @@
   </dl>
   </div>
 
+<div ng-messages="publisher">
+<p class="publisher-alert bg-warning text warning" ng-message="warning">Sorry, only one Publisher is available at this time.
+</p>
 
-<!--Goal: narrow results by 'title', author, etc.
+  </div>
+</div>
+<!--Goal: narrow results by 'title', author, etc.  ng-if="publisher" ng-click="label.publisher"
 <label ng-model="narrowSearch">Narrow Search By:</label>
 <table>
 
@@ -81,5 +83,3 @@
   <button class="btn btn-lg btn-primary">Go</button>
 </label>
 </p>-->
-</div>
-</div>

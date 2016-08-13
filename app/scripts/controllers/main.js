@@ -17,6 +17,7 @@
 
       $scope.findBooks = function (){
         $scope.books = current.query({
+          publisher: 'Harper Collins',
           saledate: $scope.saledate,
           authorname: $scope.authorname,
           title: $scope.title
@@ -24,7 +25,13 @@
       };
 
 
-
+      $scope.changepublisher = function (){
+        if ($scope.publisher !=='Harper Collins') {
+          $scope.publisher = {
+            'warning': true
+      };
+    }
+    };
 
 
   });
