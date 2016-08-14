@@ -37,6 +37,26 @@ body {
   }
 }
 
+h1, h2 {
+  font-family: 'Arima Madurai', cursive;
+}
+h2 {
+  color: white;
+}
+
+p.lovely {
+  font-family: 'Lakki Reddy', cursive;
+  padding-top: 10px;
+  color: orange;
+  font-size: 28px;
+}
+p, form, {
+  font-family: 'Arima Madurai', cursive;
+}
+
+.form {
+  font-size: 28px;
+}
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -47,6 +67,7 @@ body {
 .container-narrow > hr {
   margin: 30px 0;
 }
+
 
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -89,4 +110,7 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+.glyphicon-heart {
+  color: red;
 }
