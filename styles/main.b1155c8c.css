@@ -5735,6 +5735,50 @@ div[ng-view].ng-enter {
 div[ng-view].ng-leave {
   animation: fadeOut 0.5s; }
 
+div.nonefound {
+  background-color: yellow;
+  padding: 20px;
+  display: none;
+  font-size: 20px;
+  font-family: 'Arima Madurai', cursive; }
+
+p.search:hover + .nonefound {
+  display: block; }
+
+/* Animation code for jumbotron */
+@keyframes jumbotron {
+  0% {
+    background-color: #0040ff; }
+  10% {
+    background-color: #0080ff; }
+  20% {
+    background-color: #00bfff; }
+  30% {
+    background-color: #00ffff; }
+  40% {
+    background-color: #00ffbf; }
+  50% {
+    background-color: #00ff80; }
+  60% {
+    background-color: #00ff40; }
+  70% {
+    background-color: #bfff00; }
+  80% {
+    background-color: #ffff00; }
+  90% {
+    background-color: #ffbf00; }
+  100% {
+    background-color: #ff8000; } }
+
+/* animation element: */
+.jumbotron {
+  /*width: 100px;
+    height: 100px;*/
+  background-color: #0080ff;
+  animation-name: jumbotron;
+  animation-duration: 11s;
+  animation-iteration-count: 3; }
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -5761,6 +5805,24 @@ body {
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px; }
+
+h1, h2 {
+  font-family: 'Arima Madurai', cursive; }
+
+h2 {
+  color: white; }
+
+p.lovely {
+  font-family: 'Lakki Reddy', cursive;
+  padding-top: 10px;
+  color: orange;
+  font-size: 28px; }
+
+p, form {
+  font-family: 'Arima Madurai', cursive; }
+
+.form {
+  font-size: 28px; }
 
 /* Custom page footer */
 .footer {
@@ -5801,3 +5863,6 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0; } }
+
+.glyphicon-heart {
+  color: red; }
