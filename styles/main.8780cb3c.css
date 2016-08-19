@@ -5772,12 +5772,73 @@ p.search:hover + .nonefound {
 
 /* animation element: */
 .jumbotron {
-  /*width: 100px;
-    height: 100px;*/
   background-color: #0080ff;
   animation-name: jumbotron;
   animation-duration: 11s;
   animation-iteration-count: 3; }
+
+/*Animation code for About page flood */
+#flood {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(127, 251, 208, 0.3);
+  position: relative;
+  -webkit-animation-name: example;
+  /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 10s;
+  /* Chrome, Safari, Opera */
+  animation-name: flood;
+  animation-delay: 14s;
+  animation-duration: 10s; }
+
+/* Chrome, Safari, Opera */
+
+/* Standard syntax */
+@keyframes flood {
+  0% {
+    background-color: rgba(125, 255, 212, 0.3);
+    top: 0px;
+    height: 100px; }
+  10% {
+    background-color: rgba(125, 254, 211, 0.3);
+    top: 0px;
+    height: -200px; }
+  20% {
+    background-color: rgba(126, 253, 210, 0.3);
+    top: 0px;
+    height: -300px; }
+  30% {
+    background-color: rgba(127, 252, 209, 0.3);
+    top: 0px;
+    height: -400px; }
+  40% {
+    background-color: rgba(127, 251, 208, 0.3);
+    top: 0px;
+    height: -500px; }
+  50% {
+    background-color: rgba(127, 251, 208, 0.3);
+    top: 50px;
+    height: -600px; }
+  60% {
+    background-color: rgba(127, 251, 208, 0.3);
+    top: 0px;
+    height: -700px; }
+  70% {
+    background-color: rgba(127, 251, 208, 0.3);
+    top: 0px;
+    height: -600px; }
+  80% {
+    background-color: rgba(127, 251, 208, 0.3);
+    top: 0px;
+    height: -500px; }
+  90% {
+    background-color: rgba(127, 251, 208, 0.3);
+    top: 0px;
+    height: -400px; }
+  100% {
+    background-color: rgba(127, 251, 208, 0.3);
+    top: 0px;
+    height: -300px; } }
 
 .browsehappy {
   margin: 0.2em 0;
@@ -5824,6 +5885,11 @@ p, form {
 .form {
   font-size: 28px; }
 
+.title {
+  border-top: dotted;
+  border-color: white;
+  border-width: 2px; }
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -5866,3 +5932,168 @@ p, form {
 
 .glyphicon-heart {
   color: red; }
+
+#bookflies {
+  width: 30px;
+  height: 30px;
+  background-image: no-repeat;
+  position: relative;
+  animation: bookfly 18s infinite alternate;
+  animation-duration: 6s;
+  animation-delay: 0s;
+  z-index: 0; }
+
+@keyframes bookfly {
+  0% {
+    top: 25px;
+    left: 0px; }
+  12% {
+    top: 25px;
+    left: 150px; }
+  25% {
+    top: 125px;
+    left: 300px; }
+  50% {
+    top: 25px;
+    left: 400px; }
+  75% {
+    top: 25px;
+    left: 600px; }
+  85% {
+    top: 25px;
+    left: 750px; }
+  100% {
+    top: 50px;
+    left: 900px; } }
+
+#wordfly1 {
+  width: 30px;
+  height: 30px;
+  background-image: no-repeat;
+  position: relative;
+  animation: wordfly1 5s infinite alternate;
+  animation-duration: 6s;
+  animation-delay: 4s;
+  z-index: 0; }
+
+@keyframes wordfly1 {
+  0% {
+    top: 25px;
+    left: 0px; }
+  12% {
+    top: 25px;
+    left: 150px; }
+  25% {
+    top: 125px;
+    left: 300px; }
+  50% {
+    top: 25px;
+    left: 400px; }
+  75% {
+    top: 25px;
+    left: 600px; }
+  85% {
+    top: 25px;
+    left: 750px; }
+  100% {
+    top: 50px;
+    left: 900px; } }
+
+#wordfly2 {
+  width: 30px;
+  height: 30px;
+  background-image: no-repeat;
+  position: relative;
+  animation: wordfly2 5s infinite alternate;
+  animation-duration: 6s;
+  animation-delay: 6s;
+  z-index: 0; }
+
+@keyframes wordfly2 {
+  0% {
+    top: 50px;
+    left: 50px; }
+  12% {
+    top: 25px;
+    left: 150px; }
+  25% {
+    top: 125px;
+    left: 300px; }
+  50% {
+    top: 50px;
+    left: 400px; }
+  75% {
+    top: 25px;
+    left: 600px; }
+  85% {
+    top: 25px;
+    left: 750px; }
+  100% {
+    top: 50px;
+    left: 900px; } }
+
+#wordfly3 {
+  width: 30px;
+  height: 30px;
+  background-image: no-repeat;
+  position: relative;
+  animation: wordfly3 5s infinite alternate;
+  animation-duration: 8s;
+  animation-delay: 10s;
+  z-index: 0; }
+
+@keyframes wordfly3 {
+  0% {
+    top: 10px;
+    left: 150px; }
+  12% {
+    top: 25px;
+    left: 600px; }
+  25% {
+    top: 30px;
+    left: 300px; }
+  50% {
+    top: 50px;
+    left: 400px; }
+  75% {
+    top: 60px;
+    left: 500px; }
+  85% {
+    top: 90px;
+    left: 650px; }
+  100% {
+    top: 150px;
+    left: 300px; } }
+
+#wordfly4 {
+  width: 40px;
+  height: 30px;
+  background-image: no-repeat;
+  position: relative;
+  animation: wordfly4 5s infinite alternate;
+  animation-duration: 6s;
+  animation-delay: 12s;
+  z-index: 0; }
+
+@keyframes wordfly4 {
+  0% {
+    top: 10px;
+    left: 150px; }
+  12% {
+    top: 15px;
+    left: 600px; }
+  25% {
+    top: 20px;
+    left: 300px; }
+  50% {
+    top: 25px;
+    left: 400px; }
+  75% {
+    top: 20px;
+    left: 500px; }
+  85% {
+    top: 15px;
+    left: 650px; }
+  100% {
+    top: 150px;
+    left: 300px; } }
